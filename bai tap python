@@ -34,7 +34,19 @@ for ten,diem in diem_thi.items():
     diem_max = diem_tb
     hoc_sinh = ten
 print(f"Học sinh có điểm trung bình cao nhất là: {diem_max} tên : {hoc_sinh}")
+# mon học có điểm tb cao nhất:
+for ten,mon_hoc in diem_thi.items():
+     for mon,diem in mon_hoc.item():
+          diem_tb_mon[mon]=[]
+          diem_tb_mon[mon].append(diem)
+mon_hoc_cao_nhat = ""
+diem_trung_binh_cao_nhat = 0
+for mon, diem in diem_tb_mon.items()
+    trung_binh_mon = sum(diem)/len(diem)
+    if trung_binh_mon>diem_trung_binh_cao_nhat:
+      diem_trung_binh_cao_nhat = trung_binh_mon
+      mon_hoc_cao_nhat = mon
+print(f"Môn học có điểm trung bình cao nhất: {mon_hoc_cao_nhat} ({diem_trung_binh_cao_nhat:.2f})")
 
-    
 
   
