@@ -1,0 +1,40 @@
+#funtion homework:
+sinh_vien = [{ 'ten':'An', 'tuoi':'18', 'diem':8.5,
+                'ten':'Binh', 'tuoi':'19', 'diem':9.0,
+                'ten':'Cuong', 'tuoi':'17', 'diem':7.5}]
+def diem_trung_binh(trung_binh):
+  tong_diem = 0
+  for diem in sinh_vien:
+    tong_diem += diem['diem']
+  trung_binh = tong_diem/len(sinh_vien)
+  return trung_binh
+#########################################################################
+# method items() 
+diem_thi = {
+    "An": {"Toán": 8.5, "Lý": 9.0, "Hóa": 7.5},
+    "Bình": {"Toán": 9.0, "Lý": 8.0, "Hóa": 8.5},
+    "Cường": {"Toán": 7.0, "Lý": 7.5, "Hóa": 6.5}
+}
+# diem trung binh cho tung hoc sinh:
+for ten,mon_hoc in diem_thi.items():
+  tong_diem = 0
+  for diem in mon_hoc.values():
+  tong_diem += diem
+  diem_tb = tong_diem/len(mon_hoc)  
+  print(f"Học sinh: {ten} Điểm trung bình: {diem_tb}")
+# hoc sinh diem tb lon nhat
+hoc_sinh = ""
+diem_max = 0
+for ten,diem in diem_thi.items():
+     tong_diem = 0
+  for diem in mon_hoc.values():
+     tong_diem += diem
+  diem_tb = tong_diem/len(mon_hoc) 
+  if diem_max < diem_tb:
+    diem_max = diem_tb
+    hoc_sinh = ten
+print(f"Học sinh có điểm trung bình cao nhất là: {diem_max} tên : {hoc_sinh}")
+
+    
+
+  
