@@ -47,6 +47,29 @@ for mon, diem in diem_tb_mon.items()
       diem_trung_binh_cao_nhat = trung_binh_mon
       mon_hoc_cao_nhat = mon
 print(f"Môn học có điểm trung bình cao nhất: {mon_hoc_cao_nhat} ({diem_trung_binh_cao_nhat:.2f})")
-
+# List comprehension
+so = [1, -2, 3, 0, -5, 6]
+list_so_duong = [ x for x in so if x>0]
+print(list_so_duong)
+list_so_am_thanh_duong = [x*-1 for x in so if x<0]
+chuoi = ["hello", "world", "python", "programming"]
+do_dai_tung_chuoi = [ len(x) for x in chuoi ]
+Viet_hoa = [x.upper() for x in chuoi]
+chuoi_lon_hon_5 = [ x for x in chuoi if len(x)>5]
+cau = "Xin chào, bạn có khỏe không?"
+ds_cac_tu = cau.split() 
+ds_cac_tu_co_o = [x for x in ds_cac_tu if "o" in x]
+ds_cac_tu_dao_nguoc = [ x[::-1] for x in ds_cac_tu]
+################################################################################
+#Xử lý chuỗi nâng cao
+#Đếm số từ
+cau = input("Câu Bất kỳ:")
+print(cau)
+def dem_so_tu(cau):
+    so_tu = len(cau.split())
+    return so_tu
+so_tu = dem_so_tu(cau)
+print(f"Câu {cau} có tổng {so_tu}")
+#Tìm từ dài nhất: 
 
   
