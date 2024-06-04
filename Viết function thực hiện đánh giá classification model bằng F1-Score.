@@ -1,4 +1,15 @@
 def danh_gia_Classification_F1Score(tp,fp,fn):
-try:
-  if not (isinstance(tp,int) and isinstance(fp,int) and isinstance(fn,int):
-      
+    if not (isinstance(tp,int) and isinstance(fp,int) and isinstance(fn,int):
+    raise TypeError("tp,fp,và fn phải là một số nguyên")
+    if tp<=0 or fp <=0 or fn<=0:
+    raise ValueError("tp,fp,và fn phải lớn hơn 0")
+  try:
+    precision = tp/(tp+fp)
+    recall = tp/(tp+fn)
+    f1_score = 2 * precision * recall / (precision + recall)
+  except ZerodivisionError:
+    raise( ZeroDivisionError("Không thể tính F1-score khi precision hoặc recall bằng 0")
+  print(f"Precision: {precision:.2f}")
+  print(f"Recall: {recall:.2f}")
+  print(f"F1-score: {f1_score:.2f}")
+
