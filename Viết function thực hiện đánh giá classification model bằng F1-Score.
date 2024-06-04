@@ -1,0 +1,4 @@
+def danh_gia_Classification_F1Score(tp,fp,fn):
+try:
+  if not (isinstance(tp,int) and isinstance(fp,int) and isinstance(fn,int):
+      
